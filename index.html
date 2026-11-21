@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Ahmedu Bangura | Software Engineer</title>
+<meta name="description" content="Ahmedu Bangura: Computer Science graduate (First Class) building full-stack, backend and ML software. Based in Leicester, UK.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#f7f5f0; --ink:#16181d; --muted:#5b6070; --line:#e2ddd2;
+    --card:#fffdf8; --accent:#1f5f4a; --accent-soft:#e3efe9; --chip:#efebe2;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{font-family:Inter,system-ui,sans-serif;background:var(--bg);color:var(--ink);line-height:1.6;font-size:17px}
+  a{color:var(--accent)}
+  .wrap{max-width:980px;margin:0 auto;padding:0 24px}
+  nav{position:sticky;top:0;background:rgba(247,245,240,.9);backdrop-filter:blur(8px);border-bottom:1px solid var(--line);z-index:10}
+  nav .wrap{display:flex;justify-content:space-between;align-items:center;height:60px}
+  nav .logo{font-family:Fraunces,serif;font-weight:700;font-size:20px;text-decoration:none;color:var(--ink)}
+  nav ul{display:flex;gap:24px;list-style:none}
+  nav ul a{text-decoration:none;color:var(--muted);font-size:15px;font-weight:500}
+  nav ul a:hover{color:var(--ink)}
+  header{padding:96px 0 72px}
+  .eyebrow{font-family:"JetBrains Mono",monospace;font-size:14px;color:var(--accent);letter-spacing:.02em;margin-bottom:18px}
+  h1{font-family:Fraunces,serif;font-weight:700;font-size:clamp(40px,6vw,64px);line-height:1.05;letter-spacing:-.02em;max-width:14ch}
+  .lead{margin-top:24px;font-size:20px;color:var(--muted);max-width:58ch}
+  .lead strong{color:var(--ink);font-weight:600}
+  .cta{display:flex;gap:12px;flex-wrap:wrap;margin-top:36px}
+  .btn{display:inline-block;padding:12px 22px;border-radius:999px;font-weight:600;font-size:15px;text-decoration:none;border:1.5px solid var(--ink)}
+  .btn.primary{background:var(--ink);color:var(--bg)}
+  .btn.ghost{color:var(--ink)}
+  .btn:hover{transform:translateY(-1px)}
+  .facts{display:flex;gap:28px;flex-wrap:wrap;margin-top:48px;padding-top:28px;border-top:1px solid var(--line);font-size:15px;color:var(--muted)}
+  .facts b{display:block;color:var(--ink);font-size:16px}
+  section{padding:72px 0;border-top:1px solid var(--line)}
+  h2{font-family:Fraunces,serif;font-size:34px;letter-spacing:-.01em;margin-bottom:8px}
+  .sub{color:var(--muted);margin-bottom:36px}
+  .project{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:36px;margin-bottom:28px}
+  .project .tag{display:inline-block;font-family:"JetBrains Mono",monospace;font-size:12.5px;background:var(--accent-soft);color:var(--accent);padding:4px 10px;border-radius:6px;margin-bottom:14px}
+  .project h3{font-family:Fraunces,serif;font-size:28px;margin-bottom:10px}
+  .project p.desc{color:var(--muted);max-width:65ch}
+  .project ul{margin:20px 0 0 0;list-style:none;display:grid;gap:10px}
+  .project li{padding-left:22px;position:relative}
+  .project li::before{content:"→";position:absolute;left:0;color:var(--accent)}
+  .stack{display:flex;flex-wrap:wrap;gap:8px;margin-top:22px}
+  .stack span{font-family:"JetBrains Mono",monospace;font-size:13px;background:var(--chip);padding:5px 10px;border-radius:6px}
+  .links{display:flex;gap:18px;margin-top:24px;font-weight:600;font-size:15px}
+  .links a{text-decoration:none}
+  .links a:hover{text-decoration:underline}
+  .arch{font-family:"JetBrains Mono",monospace;font-size:13px;background:#16181d;color:#d8e6df;border-radius:12px;padding:18px 20px;margin-top:22px;overflow-x:auto;white-space:pre;line-height:1.5}
+  .skills{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:20px}
+  .skill{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:22px}
+  .skill h4{font-size:13px;text-transform:uppercase;letter-spacing:.08em;color:var(--accent);margin-bottom:10px}
+  .skill p{font-size:15.5px}
+  .timeline{display:grid;gap:24px}
+  .item{display:grid;grid-template-columns:140px 1fr;gap:24px}
+  .item .when{font-family:"JetBrains Mono",monospace;font-size:13.5px;color:var(--muted);padding-top:3px}
+  .item h4{font-size:18px}
+  .item p{color:var(--muted);font-size:15.5px}
+  .contact{text-align:center}
+  .contact h2{font-size:clamp(32px,5vw,48px)}
+  .contact p{color:var(--muted);max-width:52ch;margin:12px auto 32px}
+  .contact .cta{justify-content:center}
+  footer{padding:32px 0;text-align:center;color:var(--muted);font-size:14px;border-top:1px solid var(--line)}
+  @media (max-width:640px){
+    nav ul{display:none}
+    header{padding:64px 0 48px}
+    .project{padding:24px}
+    .item{grid-template-columns:1fr;gap:4px}
+  }
+</style>
+</head>
+<body>
+
+<nav><div class="wrap">
+  <a class="logo" href="#">Ahmedu Bangura</a>
+  <ul>
+    <li><a href="#projects">Projects</a></li>
+    <li><a href="#skills">Skills</a></li>
+    <li><a href="#about">Background</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+</div></nav>
+
+<header><div class="wrap">
+  <div class="eyebrow">// software engineer · backend · data &amp; ML</div>
+  <h1>I build full-stack software that holds up.</h1>
+  <p class="lead">I'm a <strong>First Class Computer Science graduate</strong> from De Montfort University. I like building complete systems end to end, from database schema and APIs to the UI and the machine-learning models behind it. I'm looking for a <strong>graduate or junior engineering role</strong>.</p>
+  <div class="cta">
+    <a class="btn primary" href="#projects">See my work</a>
+    <a class="btn ghost" href="cv.pdf" target="_blank">Download CV</a>
+    <a class="btn ghost" href="https://github.com/emmess330" target="_blank">GitHub</a>
+  </div>
+  <div class="facts">
+    <div><b>BSc (Hons) CS, First Class</b>De Montfort University, 2026</div>
+    <div><b>Leicester, UK</b>Remote or hybrid</div>
+    <div><b>Right to work in the UK</b>No sponsorship needed</div>
+  </div>
+</div></header>
+
+<section id="projects"><div class="wrap">
+  <h2>Selected projects</h2>
+  <p class="sub">Two systems I designed and built myself. All the code is on GitHub.</p>
+
+  <article class="project">
+    <span class="tag">Final-year project · 100% for the software deliverable</span>
+    <h3>Smart Marketplace</h3>
+    <p class="desc">A full-stack e-commerce marketplace where buyers search, buy and track orders, and sellers manage listings and see their analytics. Personalised recommendations and sales forecasts come from separate Python ML services, so the core shopping flow keeps working even if a model is down.</p>
+    <ul>
+      <li>Five Deno/Hono microservices (auth, products, orders, users, search) with clear REST contracts</li>
+      <li>Normalised PostgreSQL schema with migrations, and full-text search and filtering with Elasticsearch</li>
+      <li>Stripe checkout in test mode, with webhooks for redirect-based payments</li>
+      <li>scikit-learn recommender and sales forecasting served through FastAPI</li>
+      <li>JWT access/refresh tokens, bcrypt hashing, input validation and rate limiting</li>
+    </ul>
+<div class="arch">Next.js frontend ──► Auth · Products · Orders · Users · Search   (Deno/Hono)
+                  └──► Recommender · Forecasting                  (FastAPI + scikit-learn)
+                                 │                 │
+                            PostgreSQL       Elasticsearch   ·   Stripe</div>
+    <div class="stack"><span>Next.js</span><span>React</span><span>TypeScript</span><span>Deno</span><span>Hono</span><span>PostgreSQL</span><span>Elasticsearch</span><span>Python</span><span>FastAPI</span><span>scikit-learn</span><span>Stripe</span><span>Docker</span></div>
+    <div class="links"><a href="https://github.com/emmess330/smart-marketplace" target="_blank">View code ↗</a></div>
+  </article>
+
+  <article class="project">
+    <span class="tag">Real-time · multiplayer</span>
+    <h3>Collab Whiteboard</h3>
+    <p class="desc">A real-time whiteboard for multiple users. Anyone who opens the same room link sees everyone else's drawings and cursors appear live, even when two people draw at the same moment.</p>
+    <ul>
+      <li>CRDT-based state with Yjs, so simultaneous edits merge deterministically without locks or hand-written conflict logic</li>
+      <li>Undo/redo scoped to each user, so Ctrl+Z never undoes someone else's strokes</li>
+      <li>Offscreen-canvas rendering keeps drawing smooth with hundreds of strokes on the board</li>
+      <li>Thin WebSocket relay server that saves each room to disk with LevelDB. Containerised for Fly.io</li>
+      <li>Pen, shape, text and eraser tools, pan and zoom, live presence and a rooms landing page</li>
+    </ul>
+    <div class="stack"><span>React</span><span>TypeScript</span><span>Vite</span><span>Yjs</span><span>WebSockets</span><span>Node.js</span><span>LevelDB</span><span>Docker</span></div>
+    <div class="links"><a href="https://github.com/emmess330/collab-whiteboard" target="_blank">View code ↗</a></div>
+  </article>
+</div></section>
+
+<section id="skills"><div class="wrap">
+  <h2>Skills</h2>
+  <p class="sub">What I've used in real projects and coursework.</p>
+  <div class="skills">
+    <div class="skill"><h4>Languages</h4><p>Python, TypeScript / JavaScript, Java, C#, SQL, PHP</p></div>
+    <div class="skill"><h4>Web &amp; backend</h4><p>React, Next.js, Node.js, Deno / Hono, FastAPI, REST, WebSockets</p></div>
+    <div class="skill"><h4>Data &amp; ML</h4><p>pandas, scikit-learn, PostgreSQL, Elasticsearch, database design</p></div>
+    <div class="skill"><h4>Tools &amp; practice</h4><p>Git, Docker, GitHub Actions, Stripe API, object-oriented design</p></div>
+  </div>
+</div></section>
+
+<section id="about"><div class="wrap">
+  <h2>Background</h2>
+  <p class="sub">Education, work and the places I've lived.</p>
+  <div class="timeline">
+    <div class="item"><div class="when">2026</div><div><h4>BSc (Hons) Computer Science, First Class</h4><p>De Montfort University, Leicester. Top modules: Object-Oriented Design (85), Big Data &amp; Machine Learning (80), Database Design (74).</p></div></div>
+    <div class="item"><div class="when">Current</div><div><h4>Support Worker, Community Integrated Care</h4><p>I support people with complex needs and keep accurate records on electronic care systems. The job has taught me to stay calm under pressure, communicate clearly and be reliable.</p></div></div>
+    <div class="item"><div class="when">2021</div><div><h4>Propaedeutic Certificate</h4><p>Fontys University of Applied Sciences, Eindhoven, Netherlands.</p></div></div>
+    <div class="item"><div class="when">Languages</div><div><h4>English &amp; Dutch</h4><p>I've lived and worked in both the Netherlands and the UK.</p></div></div>
+  </div>
+</div></section>
+
+<section id="contact" class="contact"><div class="wrap">
+  <h2>Let's talk.</h2>
+  <p>I'm open to graduate and junior roles in software, backend and data/ML engineering, either remote or in the East/West Midlands.</p>
+  <div class="cta">
+    <a class="btn primary" href="mailto:ahmedbangs@gmail.com">ahmedbangs@gmail.com</a>
+    <a class="btn ghost" href="https://www.linkedin.com/in/ahmedu-bangura-7379348a/" target="_blank">LinkedIn</a>
+    <a class="btn ghost" href="https://github.com/emmess330" target="_blank">GitHub</a>
+  </div>
+</div></section>
+
+<footer>© 2026 Ahmedu Bangura · Leicester, UK</footer>
+</body>
+</html>
